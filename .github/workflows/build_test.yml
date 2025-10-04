@@ -20,14 +20,14 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 9.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
     - name: Run Project1 tests
-      run: dotnet test TestProject1\TestProject1.csproj --verbosity minimal
+      run: dotnet test TestProject1/TestProject1.csproj --verbosity minimal
     - name: Run Project2 tests
-      run: dotnet test TestProject2\TestProject2.csproj --verbosity minimal
+      run: dotnet test TestProject2/TestProject2.csproj --verbosity minimal
     - name: Run Project3 tests
-      run: dotnet test TestProject3\TestProject3.csproj --verbosity minimal
+      run: dotnet test TestProject3/TestProject3.csproj --verbosity minimal
